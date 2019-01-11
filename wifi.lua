@@ -17,8 +17,6 @@ function wifi_connect()
 	print("[wifi.lua] Connect time(s):." .. try_times)
     -- 达到最大链接次数.
 	if (try_times < max_times) then
-		print("[wifi.lua] Connect times reach limit. Initializing wifi station.")
-		dofile("enduser.lua")
 		local wifi_status = wifi.sta.status()
 		if (wifi_status == 5) then
 			print("[wifi.lua] Connect succeed.")
