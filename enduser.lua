@@ -6,10 +6,11 @@ print("[enduser.lua] Establishing AP...")
 
 wifi.setmode(wifi.STATIONAP)
 wifi_cfg = {
-	ssid = "Config" .. node.chipid(),
+	ssid = "Nodevice_" .. node.chipid(),
 	auth = wifi.OPEN,
 	hidden = false,
-	save = false}
+	save = false
+}
 
 ip_cfg = {
 	ip = "192.168.4.1",
